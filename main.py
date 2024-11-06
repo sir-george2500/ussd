@@ -2,7 +2,7 @@
 def ussd():
     msisdn = request.args.get('MSISDN')
     service_code = request.args.get('SERVICE_CODE')
-    push_type = request.args.get('PUSH_TYPE', 2)
+    push_type = request.args.get('PUSH_TYPE')
     text = request.args.get('PUSH_MENU', '')
 
     if text == "":
