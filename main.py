@@ -6,7 +6,7 @@ def ussd():
     text = request.args.get('PUSH_MENU', '')
 
     if text == "":
-        response = "FB Welcome to Winliberia:\n"
+        response = "FC Welcome to Winliberia:\n"
         response += "1) Winliberia Jackpot\n"
         response += "2) View results\n"
         response += "3) Jackpot Policy\n"
