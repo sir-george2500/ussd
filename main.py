@@ -2,15 +2,22 @@
 def ussd():
     msisdn = request.args.get('MSISDN')
     service_code = request.args.get('SERVICE_CODE')
-    push_type = request.args.get('PUSH_TYPE')
-    text = request.args.get('PUSH_TEXT', '')
+    push_type = request.args.get('PUSH_TYPE', 2)
+    text = request.args.get('PUSH_MENU', '')
 
     if text == "":
-        response = "CON Welcome to our service:\n1. Check balance\n2. View profile\n3. Exit"
-
+        response = "FB Welcome to Winliberia:\n"
+        response += "1) Winliberia Jackpot\n"
+        response += "2) View results\n"
+        response += "3) Jackpot Policy\n"
+        return response
+    
     elif text == "1":
-        response = "END Your profile details: Name: John Doe, Status: Active."
+        response = "FB Your profile details: Name: John Doe, Status: Active."
+        return response
     else:
-        response = "END Invalid option selected."
+        response = "FB Invalid option selected."
+        return response
 
-    return response
+
+
