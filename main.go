@@ -1,3 +1,6 @@
+type SessionData struct {
+	Level int `json:"level"`
+}
 
 func UssdHandler(c *gin.Context) {
 	// Set Cache-Control headers to prevent caching
